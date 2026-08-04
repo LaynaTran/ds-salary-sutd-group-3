@@ -6,3 +6,5 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+model_generated_graphs/
+original_graphs/

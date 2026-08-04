@@ -10,7 +10,7 @@ best_estimator_ = joblib.load("outputs/model.pkl")
 # single value here so the requested combination count (8,064) stays exact.
 WORK_MODE = "Onsite"
 
-year = [2020, 2021, 2022, 2023]
+year = [2020, 2021, 2022, 2023, 2024, 2025]
 general_role = [
     "Computer Vision Engineer", "Machine Learning Engineer", "Research Engineer",
     "Software Engineer", "Research Scientist", "Solution Architect",
@@ -40,7 +40,8 @@ df["work_mode"] = WORK_MODE
 df["predicted_salary_usd"] = best_estimator_.predict(df)
 
 df = df.drop(columns=["work_mode"])
-df.to_csv("outputs/synthetic_salary_data_for_viz.csv", index=False)
+export_path = "data/model_generated_data.csv"
+df.to_csv(export_path, index=False)
 
 print(f"Total rows generated: {len(df):,}")
-print("Success: outputs/synthetic_salary_data_for_viz.csv exported.")
+print(f"Success: {export_path} exported.")

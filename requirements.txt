@@ -1,7 +1,20 @@
+# Base
 pandas
 numpy
-scikit-learn
 matplotlib
+
+# Visualization
+jupyterlab>=4.2
+notebook
+polars
+kagglehub
+pycountry
+colorcet
+pyarrow
+
+# Machine learning
+scikit-learn
 xgboost
 lightgbm
 joblib
+
