@@ -58,8 +58,7 @@ python src/modeling/predict.py \
 
 Valid values: `experience_level` ∈ {Entry, Mid, Lead, Senior, Executive}; `work_mode` ∈ {Onsite, Remote, Hybrid}; `company_size` ∈ {Small, Medium, Large, Startup, Enterprise}; `company_location` is any country name as it appears in the source data; `general_role` is any of the 36 role categories (e.g. "Data Scientist", "Machine Learning Engineer", "Engineering Manager")
 
-Predict in batch (CSV needs columns: `year, experience_level, work_mode, company_size, company_location, general_role`):
-Provide a CSV with columns `year, experience_level, work_mode, company_size, company_location, general_role`:
+Predict in batch. Provide a CSV with columns `year, experience_level, work_mode, company_size, company_location, general_role`:
 
 ```bash
 python src/modeling/predict.py --input rows.csv
